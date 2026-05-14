@@ -1,0 +1,10 @@
+{
+  "aws_project_region": "us-east-1",
+  "aws_cloud_logic_custom": [
+    {
+      "name": "cryptoapi",
+      "endpoint": "https://g1vgmu8nxa.execute-api.us-east-1.amazonaws.com/dev",
+      "region": "us-east-1"
+    }
+  ]
+}
