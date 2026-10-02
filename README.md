@@ -1,16 +1,87 @@
-# React + Vite
+# Crypto Coin App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for browsing cryptocurrency prices through an AWS-hosted API. Built as a front-end portfolio project.
 
-Currently, two official plugins are available:
+## Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Crypto Coin App showing cryptocurrency prices](docs/crypto-app.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Display cryptocurrency names, symbols, and prices in USD.
+- Choose how many coins to load, from 1 to 100.
+- Set a starting position to browse different results.
+- Validate inputs before sending requests.
+- Show loading, empty-result, and error messages.
+- Apply a 15-second timeout to API requests.
+- Display developer information from the GitHub API.
+- Support smaller screens with a flexible layout.
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript
+- Vite
+- CSS
+- AWS Amplify configuration
+- AWS API Gateway endpoint
+- GitHub REST API
+- ESLint
+
+## Getting Started
+
+Use Node.js 22.13 or newer within the Node.js 22 release line. This project was checked with Node.js 22.23.3.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ugursalih/project3-crypto-app.git
+cd project3-crypto-app
+```
+
+Install dependencies and start the development server:
+
+```bash
+npm ci
+npm run dev
+```
+
+Open the local URL printed in the terminal.
+
+## Usage
+
+1. Enter a result limit between 1 and 100.
+2. Enter a starting position of 0 or greater.
+3. Select the load button to request coin data.
+
+Prices depend on the data returned by the external API.
+
+## Checks and Production Build
+
+Run the code checks:
+
+```bash
+npm run lint
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## API Dependencies
+
+Coin data is requested from an existing AWS API Gateway endpoint. Developer information is requested from GitHub's public API.
+
+An internet connection and available external services are required. The AWS backend implementation is not included in this repository.
+
+## Author
+
+[Ugur Salih](https://github.com/ugursalih)
